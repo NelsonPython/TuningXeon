@@ -17,3 +17,8 @@ SVT-HEVC Encoder Tuning Guide
 ## Network
 
 OVS-DPDK DSA Experience Guide
+
+
+New Guides:
+
+https://github.com/ludikr/SPR-Tuning-Guide-PRC-proposal/blob/main/README.md
