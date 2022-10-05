@@ -10,6 +10,8 @@ These tuning guides provide guidance on the BIOS, Operating System and workload/
 
 Cassandra
 
+SQL Server
+
 ## Media
 
 SVT-HEVC Encoder Tuning Guide
