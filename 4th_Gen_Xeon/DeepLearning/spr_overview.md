@@ -32,19 +32,19 @@ Choosing the right combination of resources greatly accelerates the efficiency o
 
 ### AI Optimization Topics
 
-The complete guide is available to download in PDF format.  This version offers more flexibility.  To get started, read these sections in the order listed below.  As you continue to optimize performance, use these as quick reference guides.
+To get started, read these sections in the order listed below.  As you continue to optimize performance, use these as quick reference guides.
 
-[Introducing Intel® AVX-512 and Intel® Deep Learning Boost](spr_amx.md) - coming soon
+[Introducing Intel® AVX-512 and Intel® Deep Learning Boost](spr_amx.md)
 
-[Linux Operating System Optimization](spr_environment.md)  - coming soon
+[Linux Operating System Optimization](spr_environment.md)
 
-[Using TensorFlow*](spr_tf.md)  - coming soon
+[Using TensorFlow*](spr_tf.md)
 
-[Using Intel® Extension for PyTorch*](spr_pytorch.md)  - coming soon
+[Using Intel® Extension for PyTorch*](spr_pytorch.md)
 
-[Uisng Intel® Neural Compressor for Model Quantization](spr_inc.md) - coming soon
+[Uisng Intel® Neural Compressor for Model Quantization](spr_inc.md)
 
-[Using Intel Distribution of OpenVINO Toolkit for Inference Acceleration](spr_ov.md) - coming soon
+[Using Intel Distribution of OpenVINO Toolkit for Inference Acceleration](spr_ov.md)
 
-[Data Analytics and Machine Learning Acceleration](spr_ml.md) - coming soon
+[Data Analytics and Machine Learning Acceleration](spr_ml.md)
 
