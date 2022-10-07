@@ -16,7 +16,7 @@ The 4th Generation Intel&reg; Xeon&reg; Scalable Processor platform is an unique
 
 A typical deep learning application has following stages:
 
-![Deep Learning stages](images/dl-stages-4-gen.jpg)
+![Deep Learning stages](images/dl-stages-4-gen.png)
 
 Each stage requires the allocation of these resources:  
 
