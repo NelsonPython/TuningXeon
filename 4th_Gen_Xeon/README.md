@@ -6,11 +6,15 @@ These tuning guides provide guidance on the BIOS, Operating System and workload/
 
 [Tuning Guide for Deep Learning with Intel® AVX512 and Intel® Deep Learning Boost on 4th Generation Intel® Xeon® Scalable Processors](DeepLearning/spr_overview.md)
 
+AI with AMX
+
 ## Databases 
 
 Cassandra
 
 SQL Server
+
+MySQL Server backup with QAT
 
 ## Media
 
@@ -20,7 +24,20 @@ SVT-HEVC Encoder Tuning Guide
 
 OVS-DPDK DSA Experience Guide
 
+Network MTCP with DSA
 
-## New Guides:
+Nginx with IAA/QAT
 
+Clickhouse with IAA/QAT
+
+## HPC
+
+Container Migration with DSA Owner
+
+HPCG Owner
+
+## Other Information:
+
+Plan for writing selected guides:
 https://github.com/ludikr/SPR-Tuning-Guide-PRC-proposal/blob/main/README.md
+
