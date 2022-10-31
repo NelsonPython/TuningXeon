@@ -58,7 +58,7 @@ Focused on data analytics operations ( Decompress, Compress, Filter )
   - In Storage select ( Amazon S3 )
   - In SSD analytics etc.
 
-![image-20221020094357074](.\img\image-20221020094357074.png)
+![image-20221020094357074](./img/image-20221020094357074.png)
 
 In this RocksDB tunning feature, IAA (De)compression is enabled in RocksDB to optimize data access performance and storage.
 
@@ -296,7 +296,7 @@ RocksDB writes process: data is added to Write-Ahead Log (WAL) first for every i
 
 A Read operation starts with a Memtable search. Then a level-by-level search is performed in the SST files until the block data is found. If the block data is already in the block cache, the data is read directly from the cache (cache hit). Otherwise, the data is loaded onto the block cache from the SST file and read (cache miss). Block data is the smallest unit of I/O for a read operation and is usually larger than a key-value pair. Therefore, there will be a certain degree of reading amplification.
 
-![img](.\img\rocks-read.jpg)
+![img](./img/rocks-read.jpg)
 
 ### RocksDB Tuning
 
