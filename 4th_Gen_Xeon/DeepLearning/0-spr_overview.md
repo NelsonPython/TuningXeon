@@ -36,17 +36,17 @@ Choosing the right combination of resources greatly accelerates the efficiency o
 
 The complete guide is available to download in PDF format.  This version offers more flexibility.  To get started, read these sections in the order listed below.  As you continue to optimize performance, use these as quick reference guides.
 
-[Introducing Intel® AVX-512 and Intel® Deep Learning Boost](spr_amx.md)
+[Introducing Intel® AVX-512 and Intel® Deep Learning Boost](1-spr_amx.md)
 
-[Linux Operating System Optimization](spr_environment.md)
+[Linux Operating System Optimization](2-spr_environment.md)
 
-[Using Intel® Extension for TensorFlow*](spr_tf.md)
+[Using Intel® Extension for TensorFlow*](3-spr_tf.md)
 
-[Using Intel® Extension for PyTorch*](spr_pytorch.md)
+[Using Intel® Extension for PyTorch*](4-spr_pytorch.md)
 
-[Uisng Intel® Neural Compressor for Low Precision Optimization](spr_inc.md)
+[Uisng Intel® Neural Compressor for Low Precision Optimization](5-spr_inc.md)
 
-[Using Intel Distribution of OpenVINO Toolkit for Inference Acceleration](spr_ov.md)
+[Using Intel Distribution of OpenVINO Toolkit for Inference Acceleration](6-spr_ov.md)
 
-[Data Analytics and Machine Learning Acceleration](spr_ml.md)
+[Data Analytics and Machine Learning Acceleration](7-spr_ml.md)
 
