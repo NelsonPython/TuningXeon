@@ -18,7 +18,13 @@ The 4th Generation Intel&reg; Xeon&reg; Scalable Processor platform is an unique
 
 A typical deep learning application has following stages:
 
-![](images/dl-stages-2.png)
+#########################################
+
+REVIEWER NOTE : This image may not be pushed into inventory. I see dl-stages.jpg, but not dl-stages-2.png
+
+##########################################
+
+ ![](images/dl-stages-2.png)
 
 Each stage requires the allocation of these resources:  
 
@@ -32,12 +38,40 @@ Choosing the right combination of resources greatly accelerates the efficiency o
 
 ![](images/dl-infrastructure.jpg)
 
+
+#########################################
+
+REVIEWER NOTE : Could you provide a diescription of this proposed infrastructure in the image dl-infrastructure.jpg
+
+If C in Controller, and s in Scheduler are capitalizted, the M in manager should also be captialized
+
+not completely sure what the four light blue boxes under "eworks" in frameworks are. Containers?
+
+##########################################
+
 ### AI Optimization Topics
 
 The complete guide is available to download in PDF format.  This version offers more flexibility.  To get started, read these sections in the order listed below.  As you continue to optimize performance, use these as quick reference guides.
 
-## Introducing Intel® AVX-512 and Intel® Deep Learning Boost
 
+
+
+#########################################
+
+REVIEWER NOTE : Should we refer developer to comprehensive manual like software developer manual https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html that has details about all of these new insructions
+
+
+##########################################
+
+<div style="page-break-after: always;"></div>
+
+# Introducing Intel® AVX-512 and Intel® Deep Learning Boost
+
+#########################################
+
+REVIEWER NOTE : increased the heading -it was difficult to see when we were moving between major sections with ##
+
+##########################################
 Intel&reg; Advanced Vector Extensions 512 (Intel&reg; AVX-512) is a &ldquo;single instruction, multiple data&rdquo; (SIMD) instruction set based on x86 processors that allows executing multiple data operations with a single instruction. As the name implies, Intel&reg; AVX-512 has a register width of 512 bits, and it supports 16 32-bit single-precision floating-point numbers or 64 8-bit integers.
 
 Intel&reg; Xeon&reg; Scalable Processors support multiple types of workloads, including complex AI workloads.  They improve AI computation performance with the use of Intel&reg; Deep Learning Boost (Intel&reg; DL Boost). Intel Deep Learning Boost includes Intel&reg; AVX-512 VNNI (Vector Neural Network Instructions), AVX512 BF16 and AMX (Advanced Matrix Extension).
@@ -93,8 +127,9 @@ The AMX extension comprises three sub-extensions: AMX-TILE, AMX-INT8, and AMX-BF
 | TDPBUUD     |          |V         |         | 
 | TDPBF16PS   |          |          | V       | 
 
+<div style="page-break-after: always;"></div>
 
-## Environment
+# Environment
 
 Tested hardware and software for this tuning guide includes:
 
@@ -195,7 +230,9 @@ There are several power modes available for each CPU which are collectively refe
 
 ``` #cpupower idle-set -d 2,3 ```
  
-## Using Intel® Extension for TensorFlow* for optimization and Performance boost
+<div style="page-break-after: always;"></div>
+
+# Using Intel® Extension for TensorFlow* for optimization and Performance boost
 
 Intel® Extension for TensorFlow* adds optimizations for extra performance when running TensorFlow on Intel hardware. The intention of the extension is to deliver up-to-date features and optimizations for TensorFlow on Intel hardware. Examples include AVX-512 Vector Neural Network Instructions (AVX512 VNNI) and Intel® Advanced Matrix Extensions (Intel® AMX).
 
@@ -207,6 +244,16 @@ Refer to [Installation Guide](https://intel.github.io/intel-extension-for-tensor
 After having installed Intel® Extension for TensorFlow*, it will be activated automatically as a plugin of stock TensorFlow.
 
 ## Optimization Recommendations for Training and Inferencing TensorFlow-based Deep Learning Models
+
+#########################################
+
+REVIEWER NOTE : Could you provide a not explaining that oneDNN is now on by default with Tensor flow versions?
+
+The ONEDNN_VERBOSE flag is discussed, and user may not be sure if they still need it 
+
+##########################################
+
+
 Intel® Extension for TensorFlow* is a Python package to extend official TensorFlow, achieve higher performance. Although stock TensorFlow and the default configuration of Intel® Extension for TensorFlow* perform well, there are still something that users can do for performance optimization on specific platforms. Most optimized configurations can be automatically set by the launch script. Mainly for the following:
 
 - NUMA Control: numactl specifies NUMA scheduling and memory placement policy
@@ -360,7 +407,10 @@ Same as inference, you can enable Advanced AMP either using Python API or settin
 
 Intel® Extension for TensorFlow* co-works with [Intel® Neural Compressor](https://intel.github.io/neural-compressor) >= 1.14.1 to provide compatible TensorFlow INT8 quantization solution support with same user experience.
 
-## Using Intel® Extension for Pytorch* for optimization and Performance boost
+
+<div style="page-break-after: always;"></div>
+
+# Using Intel® Extension for Pytorch* for optimization and Performance boost
 
 Intel® Extension for PyTorch* adds optimizations for extra performance when running PyTorch on Intel hardware.  Most of the optimizations will be included in stock PyTorch releases eventually.  The intention of the extension is to deliver up-to-date features and optimizations for PyTorch on Intel hardware.  Examples include AVX-512 Vector Neural Network Instructions (AVX512 VNNI) and Intel® Advanced Matrix Extensions (Intel® AMX).
 
@@ -381,6 +431,21 @@ Step 1: Visit the official PyTorch website: [https://pytorch.org/](https://pytor
 Step 2: Select CPU
 
 Currently, Intel oneDNN is integrated into the official version of PyTorch, so there is no need for an additional installation to have accelerated performance on the Intel&reg; Xeon&reg; Scalable Processor platform. Select &ldquo;CPU&rdquo; for Compute Platform. See the figure below for details.
+
+#########################################
+
+REVIEWER NOTE : Starting with what version is onednn installed by default?
+
+##########################################
+
+
+#########################################
+
+REVIEWER NOTE : images/torch-cpu.png not in this directory
+
+##########################################
+
+
 
 ![](images/torch-cpu.png)
 
@@ -490,7 +555,9 @@ To Check whether AMX_BF16 is enabled, check for ` avx512_core_amx_bf16 ` JIT Ker
 The Github link to the Intel® Extension for PyTorch* is:
 [Intel® Extension for PyTorch*](https://github.com/intel/intel-extension-for-pytorch)
 
-## Using Intel® Neural Compressor for Low Precision Optimization
+<div style="page-break-after: always;"></div>
+
+# Using Intel® Neural Compressor for Low Precision Optimization
 
 ## AI Neural Network Model Low Precision Optimization
 
@@ -890,8 +957,10 @@ Intel® AVX-512 info: [https://colfaxresearch.com/skl-avx512/](https://colfaxres
 Intel® Optimized AI Frameworks: [https://www.intel.com/content/www/us/en/developer/tools/frameworks/overview.html](/content/www/us/en/developer/tools/frameworks/overview.html)
 
 Intel® Neural Compressor: [https://github.com/intel/neural-compressor](https://github.com/intel/neural-compressor)
-  
-## Using Intel&reg; Distribution of OpenVINO&trade; Toolkit for Inference Acceleration
+
+<div style="page-break-after: always;"></div>
+
+# Using Intel&reg; Distribution of OpenVINO&trade; Toolkit for Inference Acceleration
 
 ### Intel&reg; Distribution of OpenVINO&trade; Toolkit
 
@@ -919,6 +988,12 @@ For more information, refer to OpenVINO™ online documentation: <https://docs.o
 
 The default floating-point precision of a CPU primitive is f32. On platforms that natively support bfloat16 calculations with AVX512_BF16 or AMX_BF16 extensions, the bf16 type is automatically used instead of f32.  This will achieve better performance.  See the [BFLOAT16 – Hardware Numerics Definition white paper](https://www.intel.com/content/dam/develop/external/us/en/documents/bf16-hardware-numerics-definition-white-paper.pdf) for more details about the bfloat16 format.  
 
+#########################################
+
+REVIEWER NOTE : This guide uses both upper case and lower case BF16 and bf16 / F32 and f32. Make sure to be consistent across all the sections. 
+
+##########################################
+
 Using bf16 precision provides the following performance benefits:
 
 - Faster multiplication of two bfloat16 numbers because of the shorter mantissa of the bfloat16 data.  
@@ -939,6 +1014,13 @@ Use the benchmark_app to check whether BF16/I8 is enabled when running inference
 `benchmark_app -m ./intel/horizontal-text-detection-0001/FP32/horizontal-text-detection-0001.xml -pc`  
   - We can see some kernels are running with BF16 precison with both avx512 and amx instructions.  
 ![](images/ov_benchmark.png)
+
+#########################################
+
+REVIEWER NOTE : This image contains benchmarking data. could it be possible to crop and only keep to the left of "realTime"?
+
+##########################################
+
 - INT8
   - Download INT8 model from open model zoo (or pick your own INT8 model), download [horizontal-text-detection-0001](https://docs.openvino.ai/latest/omz_models_model_horizontal_text_detection_0001.html) here as an example:  
 `omz_downloader --name horizontal-text-detection-0001 --precisions FP16-INT8 -o .`  
@@ -946,6 +1028,13 @@ Use the benchmark_app to check whether BF16/I8 is enabled when running inference
 `benchmark_app -m ./intel/horizontal-text-detection-0001/FP16-INT8/horizontal-text-detection-0001.xml -pc`  
   - We can see some kernels are running with I8 precison with both avx512 and amx instructions.  
 ![](images/ov_benchmark_i8.png)
+
+#########################################
+
+REVIEWER NOTE : This image contains benchmarking data. could it be possible to crop and only keep to the left of "realTime"?
+
+##########################################
+
 
 **Notes**  
   
@@ -964,8 +1053,16 @@ Python:
 If you use the benchmark_app, set -infer_precision to f32, for example:  
 
 `benchmark_app -m ./intel/horizontal-text-detection-0001/FP32/horizontal-text-detection-0001.xml -pc -infer_precision f32`
-  
-## Data Analytics and Machine Learning Acceleration
+
+
+REVIEWER NOTE : What is difference between how model changes here and what takes place using the neural compressor? Is it the same process?
+
+##########################################
+
+
+<div style="page-break-after: always;"></div>
+
+# Data Analytics and Machine Learning Acceleration
   
 As a branch of artificial intelligence, machine learning is currently attracting much attention. Machine learning-based analytics are also becoming increasingly popular.  When compared to other analytics, machine learning can help IT staff, data scientists, and business teams in many types of organizations to quickly unleash the power of AI. Furthermore, machine learning offers many new commercial and open-source solutions, providing a vast ecosystem for developers. Developers can choose from a variety of open-source machine learning libraries such as  Scikit-learn*,  Cloudera* and  Spark* MLlib.
 
@@ -979,6 +1076,14 @@ Intel&reg; Distribution for Python* features:
 - Achieve near-native performance through acceleration of core Python numerical and scientific packages that are built using Intel® Performance Libraries.
 - Achieve highly efficient multithreading, vectorization, and memory management, and scale scientific computations efficiently across a cluster.
 - Core packages include Numba, NumPy, SciPy, and more.  
+
+
+##########################################
+
+REVIEWER NOTE : Should user be using intel distribution of python with all of the python tools (tensorflow, pytorch, inc). If so, should the intel distribution of intel be discussed earlier in the document?
+
+##########################################
+
 
 Reference and download site: [https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html](https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html)
   
@@ -998,6 +1103,12 @@ Intel® Distribution of Modin* Features:
 - Accelerated DataFrame Processing
   - Speed up the extract, transform, and load (ETL) process for large DataFrames
   - Automatically use all of the processing cores available on your machine 
+
+##########################################
+
+REVIEWER NOTE: Mentions Optane - is this still the plan to market Optane?
+
+##########################################
 
 - Optimized for Intel Hardware
   - Scale to terabytes of data using Intel® Optane™ Persistent Memory on a single data science workstation
